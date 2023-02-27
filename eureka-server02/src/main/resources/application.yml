@@ -15,9 +15,10 @@ eureka:
     eviction-interval-timer-in-ms: 6000
 
   instance:
+    hostname: eureka01
     prefer-ip-address: true
-    #instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
   client:
     service-url:
       defaultZone: http://root:123456@localhost:8761/eureka/
