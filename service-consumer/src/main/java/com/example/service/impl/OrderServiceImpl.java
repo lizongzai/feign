@@ -22,7 +22,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {
 
-
   @Autowired
   private OrderMapper orderMapper;
   @Autowired
@@ -37,7 +36,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
   @Override
   public Order selectOrderById(Integer id) {
 
-    //LoadBalancerClient负载均衡调用微服务
+    //查询商品列表
     List<Product> productList = productService.selectProductList();
 
     //获取订单信息

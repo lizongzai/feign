@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface IProductService {
 
   /**
-   * 功能描述: 获取商品列表
+   * 功能描述: 查询商品列表
    *
    * @return
    */
