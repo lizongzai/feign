@@ -32,6 +32,12 @@
       <version>3.0.2</version>
     </dependency>
 
+    <!--spring cloud openfeign 依赖-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+
     <!--lombok 依赖包-->
     <dependency>
       <groupId>org.projectlombok</groupId>

@@ -31,8 +31,8 @@ public class OrderController {
    * @return
    */
   @GetMapping("/{id}")
-  public Order getOrderById(@PathVariable("id") Integer id) {
-    return orderService.getOrderById(id);
+  public Order selectOrderById(@PathVariable("id") Integer id) {
+    return orderService.selectOrderById(id);
   }
 
 }

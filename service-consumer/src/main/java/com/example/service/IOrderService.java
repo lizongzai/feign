@@ -19,5 +19,5 @@ public interface IOrderService extends IService<Order> {
    * @param id
    * @return
    */
-  Order getOrderById(Integer id);
+  Order selectOrderById(Integer id);
 }
