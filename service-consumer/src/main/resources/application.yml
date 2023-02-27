@@ -35,7 +35,7 @@ eureka:
     # 表示Eureka Client 间隔多长时间服务器来取注册信息,默认为30秒
     registry-fetch-interval-seconds: 10
 
-# 负载均衡策略
+# 局部负载均衡策略
 # service-provider是指被调用者的微服务名称
 service-provider:
   ribbon:
