@@ -49,3 +49,7 @@ service-provider:
 feign:
   httpclient:
     enabled: true # 开启httpclient
+  client:
+    config:
+      service-provider: # 需要调用的服务名称
+        logger-level: Full
