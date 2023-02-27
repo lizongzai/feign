@@ -8,10 +8,10 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>service-provider</artifactId>
+  <artifactId>service-consumer</artifactId>
   <packaging>jar</packaging>
 
-  <name>service-provider</name>
+  <name>service-consumer</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -77,5 +77,13 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!--Ribbon 依赖包-->
+    <dependency>
+      <groupId>com.netflix.ribbon</groupId>
+      <artifactId>ribbon-loadbalancer</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+
   </dependencies>
 </project>
