@@ -3,6 +3,7 @@ package com.example.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.pojo.Product;
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -21,4 +22,12 @@ public interface ProductMapper extends BaseMapper<Product> {
    */
   List<Product> getAllProducts();
 
+
+  /**
+   * 功能描述: 根据主键查询商品
+   *
+   * @param id
+   * @return
+   */
+  Product selectProductById(@Param("id") Integer id);
 }

@@ -22,4 +22,11 @@ public interface IProductService extends IService<Product> {
    */
   List<Product> getAllProducts();
 
+  /**
+   * 功能描述: 根据主键查询商品
+   *
+   * @return
+   */
+  Product selectProductById(Integer id);
+
 }

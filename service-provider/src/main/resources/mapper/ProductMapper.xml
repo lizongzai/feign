@@ -23,4 +23,11 @@
     from t_product;
   </select>
 
+  <!--  根据主键查询商品-->
+  <select id="selectProductById" resultType="com.example.pojo.Product">
+    select *
+    from t_product
+    where id = #{id};
+  </select>
+
 </mapper>

@@ -32,4 +32,15 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
   public List<Product> getAllProducts() {
     return productMapper.getAllProducts();
   }
+
+  /**
+   * 功能描述: 根据主键查询商品
+   *
+   * @param id
+   * @return
+   */
+  @Override
+  public Product selectProductById(Integer id) {
+    return productMapper.selectProductById(id);
+  }
 }
