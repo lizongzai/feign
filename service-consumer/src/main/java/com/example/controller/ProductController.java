@@ -4,6 +4,7 @@ import com.example.pojo.Product;
 import com.example.pojo.RespBean;
 import com.example.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,5 +41,17 @@ public class ProductController {
       return RespBean.success("添加失败");
     }
     return productService.addProduct(product);
+  }
+
+
+  /**
+   * 功能描述: 接收商品对象参数
+   *
+   * @param product
+   * @return
+   */
+  @GetMapping("/pojo")
+  public Product selectProductByPojo(@RequestBody Product product) {
+    return productService.selectProductByPojo(product);
   }
 }

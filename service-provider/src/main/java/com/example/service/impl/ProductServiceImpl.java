@@ -1,5 +1,6 @@
 package com.example.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.mapper.ProductMapper;
 import com.example.pojo.Product;
@@ -67,10 +68,22 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
 
     int result = productMapper.addProduct(product);
     System.out.println("添加商品 = " + product);
-    if (result > 0 ) {
+    if (result > 0) {
       return RespBean.success("添加成功!");
     } else {
       return RespBean.success("添加失败!");
     }
+  }
+
+  /**
+   * 功能描述: 接收商品对象参数
+   *
+   * @param product
+   * @return
+   */
+  @Override
+  public Product selectProductByPojo(Product product) {
+    System.out.println("接收商品对象参数 = " + product);
+    return product;
   }
 }

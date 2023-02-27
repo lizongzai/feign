@@ -55,4 +55,13 @@ public interface IProductService {
   @PostMapping("/product/save")
   RespBean addProduct(Product product);
 
+  /**
+   * 功能描述: 接收商品对象参数
+   *
+   * @param product
+   * @return
+   */
+  @GetMapping("/product/pojo")
+  Product selectProductByPojo(Product product);
+
 }

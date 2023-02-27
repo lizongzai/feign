@@ -70,9 +70,22 @@ public class ProductController {
   @PostMapping("/save")
   public RespBean addProduct(@RequestBody Product product) {
 
-    if (product.getProductName() == null || product.getProductNum() == null || product.getProductPrice() == null) {
+    if (product.getProductName() == null || product.getProductNum() == null
+        || product.getProductPrice() == null) {
       return RespBean.success("添加失败");
     }
     return productService.addProduct(product);
+  }
+
+
+  /**
+   * 功能描述: 接收商品对象参数
+   *
+   * @param product
+   * @return
+   */
+  @GetMapping("/pojo")
+  public Product selectProductByPojo(@RequestBody Product product) {
+    return productService.selectProductByPojo(product);
   }
 }

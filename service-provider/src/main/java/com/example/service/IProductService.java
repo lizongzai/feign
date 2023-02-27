@@ -48,4 +48,12 @@ public interface IProductService extends IService<Product> {
    */
   RespBean addProduct(Product product);
 
+  /**
+   * 功能描述: 接收商品对象参数
+   *
+   * @param product
+   * @return
+   */
+  Product selectProductByPojo(Product product);
+
 }
