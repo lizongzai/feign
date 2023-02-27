@@ -2,7 +2,9 @@ package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.pojo.Product;
+import com.example.pojo.RespBean;
 import java.util.List;
+import java.util.Map;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -30,4 +32,20 @@ public interface ProductMapper extends BaseMapper<Product> {
    * @return
    */
   Product selectProductById(@Param("id") Integer id);
+
+  /**
+   * 功能描述: 使用POST方法,根据主键查询商品
+   *
+   * @param id
+   * @return
+   */
+  Product queryProductById(@Param("id") Integer id);
+
+  /**
+   * 功能描述: 使用POST方法,添加商品
+   *
+   * @param product
+   * @return
+   */
+  int addProduct(Product product);
 }

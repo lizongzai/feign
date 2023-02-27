@@ -5,25 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * 功能描述: 公共返回结果
- *
- * @author lizongzai
- * @since 1.0.0
- */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value = "RespBean对象", description = "")
+@AllArgsConstructor
+@ApiModel(value="RespBean对象", description="")
 public class RespBean {
 
   private long code;
   private String message;
-  private Object object;
+  private Object obj;
 
   /**
-   * 功能描述:返回成功结果
-   *
+   * @Description //TODO 成功返回结果
+   * @Author lizongzai
    * @param message
    * @return
    */
@@ -32,20 +26,19 @@ public class RespBean {
   }
 
   /**
-   * 功能描述:返回成功结果
-   *
+   * @Description //TODO 成功返回结果
+   * @Author lizongzai
    * @param message
-   * @param object
+   * @param obj
    * @return
    */
-  public static RespBean success(String message, Object object) {
-    return new RespBean(200, message, object);
+  public static RespBean success(String message,Object obj) {
+    return new RespBean(200, message, obj);
   }
 
-
   /**
-   * 功能描述:失败成功结果
-   *
+   * @Description //TODO 失败返回结果
+   * @Author lizongzai
    * @param message
    * @return
    */
@@ -54,13 +47,14 @@ public class RespBean {
   }
 
   /**
-   * 功能描述:失败成功结果
-   *
+   * @Description //TODO 失败返回结果
+   * @Author lizongzai
    * @param message
-   * @param object
+   * @param obj
    * @return
    */
-  public static RespBean error(String message, Object object) {
-    return new RespBean(500, message, object);
+  public static RespBean error(String message,Object obj) {
+    return new RespBean(500, message, obj);
   }
 }
+

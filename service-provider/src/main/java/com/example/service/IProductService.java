@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.pojo.Product;
+import com.example.pojo.RespBean;
 import java.util.List;
 
 /**
@@ -23,10 +24,28 @@ public interface IProductService extends IService<Product> {
   List<Product> getAllProducts();
 
   /**
-   * 功能描述: 根据主键查询商品
+   * 功能描述: 使用GET方法,根据主键查询商品
    *
    * @return
    */
   Product selectProductById(Integer id);
+
+
+  /**
+   * 功能描述: 使用POST方法,根据主键查询商品
+   *
+   * @param id
+   * @return
+   */
+  Product queryProductById(Integer id);
+
+
+  /**
+   * 功能描述: 使用POST方法,添加商品
+   *
+   * @param product
+   * @return
+   */
+  RespBean addProduct(Product product);
 
 }
