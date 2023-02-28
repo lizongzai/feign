@@ -21,7 +21,7 @@
 
   <!--应用日志文件保存路径 -->
   <!--在没有定义${LOG_HOME}系统变量的时候，可以设置此本地变量。 -->
-  <property name="LOG_HOME" value="{catalina.base}/service-consumer/logs"/>
+  <property name="LOG_HOME" value="${catalina.base}/service-consumer/logs"/>
   <property name="INFO_PATH" value="${LOG_HOME}/info"/>
   <property name="DEBUG_PATH" value="${LOG_HOME}/debug"/>
   <property name="ERROR_PATH" value="${LOG_HOME}/error"/>
