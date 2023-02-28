@@ -46,6 +46,12 @@ public class ProductController {
    */
   @GetMapping("/{id}")
   public Product selectProductById(@PathVariable("id") Integer id) {
+    try {
+      // 设置超时验证
+      Thread.sleep(2000L);
+    } catch (InterruptedException e) {
+      throw new RuntimeException(e);
+    }
     return productService.selectProductById(id);
   }
 

@@ -46,6 +46,13 @@ eureka:
 service-provider:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadBalancer.RandomRule
+    ribbon:
+      OkToRetryOnAllOperations: false #对所有操作请求都进行重试,默认false
+      ReadTimeout: 5000   #负载均衡超时时间，默认值5000
+      ConnectTimeout: 3000 #ribbon请求连接的超时时间，默认值2000
+      MaxAutoRetries: 3     #对当前实例的重试次数，默认0
+      MaxAutoRetriesNextServer: 1 #对切换实例的重试次数，默认1
+
 feign:
   httpclient:
     enabled: true # 开启httpclient
@@ -53,3 +60,6 @@ feign:
     config:
       service-provider: # 需要调用的服务名称
         logger-level: Full
+ribbon:
+  ConnectionTimeout: 5000 # 请求连接超时时间,默认为1秒
+  ReadTimeout: 5000 # 请求处理的超时时间
