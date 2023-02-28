@@ -23,3 +23,11 @@ Fegin声明式服务调用
 
 ### 2. Fegin声明式服务调用
 ![image](https://user-images.githubusercontent.com/49580847/221726059-4361fd73-358b-4d5e-a721-fb05920cfeb8.png)
+
+
+### 3. 核心要点
+Feign的使用主要分为以下几个步骤:
+- 服务消费者添加Feign依赖包
+- 创建业务层接口,添加@FeinClient注解声明需要调用的微服务
+- 业务层抽象方法使用SpringMVC注解配置服务地址以参数
+- 启动类添加@EnableFeignClients注解激活Feign组件
