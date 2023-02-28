@@ -22,3 +22,6 @@ Fegin声明式服务调用
   - 请求超时
 - mysql
 - docker
+
+### Fegin声明式服务调用
+![image](https://user-images.githubusercontent.com/49580847/221726059-4361fd73-358b-4d5e-a721-fb05920cfeb8.png)
