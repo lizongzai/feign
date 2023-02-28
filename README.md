@@ -1,7 +1,5 @@
-# eureak & feign
+# feign
 Fegin声明式服务调用
-
-## 微服务介绍
 
 ### 1. 技术介绍
 
