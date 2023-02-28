@@ -1,9 +1,9 @@
-# feign
+# eureak & feign
 Fegin声明式服务调用
 
 ## 微服务介绍
 
-### 技术介绍
+### 1. 技术介绍
 
 - Spring Boot 2.7.9
 - Spring Cloud 2021.0.6
@@ -23,5 +23,5 @@ Fegin声明式服务调用
 - mysql
 - docker
 
-### Fegin声明式服务调用
+### 2. Fegin声明式服务调用
 ![image](https://user-images.githubusercontent.com/49580847/221726059-4361fd73-358b-4d5e-a721-fb05920cfeb8.png)
